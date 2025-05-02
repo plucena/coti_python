@@ -3,7 +3,9 @@ PROMPTS
 
 ```
 gemini 2.5 @coti-python-examples @coti-web3
-create a program in web3.py  python that list all the COTI  tokens stored in coti main  network at this address 0xb44E90707A29890942AE1D6595D6A52BA2Ba762e
+create a program in web3.py  python that list all the COTI  tokens stored in coti main  network at this address 
+0xb44E90707A29890942AE1D6595D6A52BA2Ba762e
+use coti rpc address to connect
 ````
 
 ```
