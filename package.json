@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@coti-io/coti-contracts": "github:coti-io/coti-contracts"
+  }
+}
