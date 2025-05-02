@@ -1,5 +1,15 @@
 PROMPTS
 
+running using Python 3.10.9
+
+run onboarding example
+```
+cd coti-python-examples/coti-web3/examples         
+python 
+```
+
+
+transfer tokens
 
 ```
 gemini 2.5 @coti-python-examples @coti-web3
