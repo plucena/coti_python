@@ -13,7 +13,7 @@ now do the same thing for COTI  testnet
 deploy smart contracts
 
 ```
-gemini 2.5 @coti-python-examples @coti-web3 @PrivateStorage.col
+gemini 2.5 @coti-python-examples @coti-web3 @PrivateStorage.sol
 
 write a web3.py program to compile and deploy @PrivateStorage.sol  on Coti Testnet
 
