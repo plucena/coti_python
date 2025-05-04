@@ -1,7 +1,7 @@
 import os
-
 import dotenv
 from eth_account import Account
+from getpass import getpass
 
 def get_working_directory():
     repo_name = 'coti-web3'
@@ -17,11 +17,21 @@ def create_eoa():
     return hex_val
 
 def get_account_private_key():
-    account_private_key = os.getenv('ACCOUNT_PRIVATE_KEY')
-    if account_private_key is None:
+    try:
+        account_private_key = getpass("Enter your private key: ")
+    except Exception as e:
+        account_private_key = None
+        print("no key")
+
+    # Treat empty input the same as None (no key provided)
+    if not account_private_key:
         print('So you dont have an account yet, dont worry... lets create one right now!')
         account_private_key = create_eoa()
         print('Creation done!')
+        # No need to check for '0x' prefix here, as create_eoa returns a hex string without it
+        return account_private_key
+        
+    # Only check for '0x' if a key was actually entered
     if account_private_key.startswith('0x'):
         account_private_key = account_private_key[2:]
     return account_private_key

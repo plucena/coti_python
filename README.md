@@ -5,11 +5,26 @@ running using Python 3.10.9
 run onboarding example
 ```
 cd coti-python-examples/coti-web3/examples         
-python 
+python onboard.py
+
+Creation done!
+PK
+ADDRESS
+RuntimeError: Account balance is 0 so user cannot be onboarded.
+
+https://faucet.coti.io
+testnet address
+
+python onboard.py
+enter PK this time
+
+.coti-python-examples/coti-python-examples/coti-web3/.env is updated with
+ACCOUNT_PRIVATE_KEY=
+ACCOUNT_ENCRYPTION_KEY=
 ```
 
 
-transfer tokens
+list tokens
 
 ```
 gemini 2.5 @coti-python-examples @coti-web3
@@ -33,7 +48,7 @@ https://docs.soliditylang.org/en/latest/installing-solidity.html
 
 gemini 2.5 @coti-python-examples @coti-web3 @PrivateStorage.sol
 
-write a web3.py program to compile and deploy @PrivateStorage.sol  on Coti Testnet
+write a @coti-web3.py program to compile and deploy @PrivateStorage.sol  on Coti Testnet
 
 will probably  fail signing
 ```

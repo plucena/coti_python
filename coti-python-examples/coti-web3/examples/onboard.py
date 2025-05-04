@@ -28,6 +28,7 @@ def main():
 def init():
     load_dotenv()  # loading .env
     eoa_private_key = get_account_private_key()  # Get EOA Private key for execution
+    
     eoa = Account.from_key(eoa_private_key)  # Get EOA
 
     # Define methods expected by coti utils
