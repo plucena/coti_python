@@ -2,6 +2,10 @@ PROMPTS
 
 running using Python 3.10.9
 
+pip install dotenv
+pip install coti-web3
+
+
 run onboarding example
 ```
 cd coti-python-examples/coti-web3/examples         
@@ -59,7 +63,10 @@ check smart contract on  testnet
 https://testnet.cotiscan.io/address/0xb44E90707A29890942AE1D6595D6A52BA2Ba762e
 ```
 
+compile @PrivateStorage.sol
+cd contracts 
+solc --abi PrivateStorage.sol -o . --overwrite
 
-given @PrivateStorage.sol  deployed on Coti Testnet at 0x536A67f0cc46513E7d27a370ed1aF9FDcC7A5095 create a @web3.py program to invoke setPrivateNumber and getPrivateNumber from @PrivateStorage.sol 
+given @PrivateStorage.abi  deployed on Coti Testnet at 0x536A67f0cc46513E7d27a370ed1aF9FDcC7A5095 create a @web3.py program  witha function to invoke setPrivateNumber and another function to getPrivateNumber from @PrivateStorage.abi.   
 
 
