@@ -75,8 +75,9 @@ https://testnet.cotiscan.io/address/0xb44E90707A29890942AE1D6595D6A52BA2Ba762e
 ```
 compile @PrivateStorage.sol 
 
-
-cd contracts solc --abi PrivateStorage.sol -o . --overwrite
+cd contracts 
+solc --abi PrivateStorage.sol -o . --overwrite
+cd ..
 
 @claude-3.7-sonnet
 
