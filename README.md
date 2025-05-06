@@ -10,7 +10,9 @@ pip install dotenv
 
 pip install coti-web3
 
-run programs using python3
+pip install Flask
+
+*run programs using python3*
 
 
 run onboarding example
@@ -76,13 +78,35 @@ compile @PrivateStorage.sol
 
 cd contracts solc --abi PrivateStorage.sol -o . --overwrite
 
+@claude-3.7-sonnet
 
-gemini 2.5 PrivateStorage.abi @COTI-DOCs 
-
-given  COTI smartcontract @PrivateStorage.abi   deployed on Coti Testnet at 0x6aA33b6357230e44bCEB1CA5c5c580112d0e13a4 create a @web3.py program with 2 separate functions and a menu invoke setPrivateNumber and getPrivateNumber from @PrivateStorage.abi use ACCOUNT_PRIVATE_KEY and ACCOUNT_ENCRYPTION_KEY from .env files
-
+given  COTI smartcontract @PrivateStorage.abi   deployed on Coti Testnet at 0x5220aa2B4FeC347F751AaE0930d784f5139C526E create a @coti-web3.py  program with 2 separate functions and a menu invoke setPrivateNumber and getPrivateNumber from @PrivateStorage.abi use ACCOUNT_PRIVATE_KEY and use AES KEY 63f49d1ef7b1510060edcec934828b09 to decrypt ctUint64 type
 
 
 ```
+
+
+create API
+
+```
+@gemini
+
+Create a Flask REST API on a separate script that imports and calls functions from private_storage_menu.py
+
+API should have two methods
+
+GET privatenumber  calls function on private_storage_menu.py  no input poarams, 
+should call the initialization start() before calling 
+get_private_number(account, web3)
+
+SET /privatenumber calls function on 
+private_storage_menu.py int_value as the only param 
+should call the initialization start() before calling 
+set_private_number(account, web3, int_value)
+
+
+check http://127.0.0.1:5000/privatenumber
+```
+
 
 
