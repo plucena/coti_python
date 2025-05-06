@@ -2,8 +2,15 @@ PROMPTS
 
 running using Python 3.10.9
 
+python3 -m venv coti-env
+
+source coti-env/bin/activate
+
 pip install dotenv
+
 pip install coti-web3
+
+run programs using python3
 
 
 run onboarding example
@@ -63,10 +70,19 @@ check smart contract on  testnet
 https://testnet.cotiscan.io/address/0xb44E90707A29890942AE1D6595D6A52BA2Ba762e
 ```
 
-compile @PrivateStorage.sol
-cd contracts 
-solc --abi PrivateStorage.sol -o . --overwrite
+```
+compile @PrivateStorage.sol 
 
-given @PrivateStorage.abi  deployed on Coti Testnet at 0x536A67f0cc46513E7d27a370ed1aF9FDcC7A5095 create a @web3.py program  witha function to invoke setPrivateNumber and another function to getPrivateNumber from @PrivateStorage.abi.   
+
+cd contracts solc --abi PrivateStorage.sol -o . --overwrite
+
+
+gemini 2.5 PrivateStorage.abi @COTI-DOCs 
+
+given  COTI smartcontract @PrivateStorage.abi   deployed on Coti Testnet at 0x6aA33b6357230e44bCEB1CA5c5c580112d0e13a4 create a @web3.py program with 2 separate functions and a menu invoke setPrivateNumber and getPrivateNumber from @PrivateStorage.abi use ACCOUNT_PRIVATE_KEY and ACCOUNT_ENCRYPTION_KEY from .env files
+
+
+
+```
 
 
