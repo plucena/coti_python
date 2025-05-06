@@ -80,8 +80,11 @@ cd contracts solc --abi PrivateStorage.sol -o . --overwrite
 
 @claude-3.7-sonnet
 
-given  COTI smartcontract @PrivateStorage.abi   deployed on Coti Testnet at 0x5220aa2B4FeC347F751AaE0930d784f5139C526E create a @coti-web3.py  program with 2 separate functions and a menu invoke setPrivateNumber and getPrivateNumber from @PrivateStorage.abi use ACCOUNT_PRIVATE_KEY and use AES KEY 63f49d1ef7b1510060edcec934828b09 to decrypt ctUint64 type
-
+given  COTI smartcontract @PrivateStorage.abi   deployed on Coti Testnet 
+at 0x5220aa2B4FeC347F751AaE0930d784f5139C526E
+create a @coti-web3.py  program with 2 separate functions and a menu 
+invoke setPrivateNumber and getPrivateNumber from @PrivateStorage.abi 
+use ACCOUNT_PRIVATE_KEY XXXX and use AES KEY 63f49d1ef7b1510060edcec934828b09 to decrypt ctUint64 type
 
 ```
 
