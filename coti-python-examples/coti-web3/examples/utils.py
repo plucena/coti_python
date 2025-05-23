@@ -28,12 +28,19 @@ def get_account_private_key():
         print('So you dont have an account yet, dont worry... lets create one right now!')
         account_private_key = create_eoa()
         print('Creation done!')
-        # No need to check for '0x' prefix here, as create_eoa returns a hex string without it
+        # create_eoa() returns a hex string without '0x'
         return account_private_key
         
-    # Only check for '0x' if a key was actually entered
+    # Remove '0x' prefix if present
     if account_private_key.startswith('0x'):
         account_private_key = account_private_key[2:]
+    
+    # Validate that the key is a valid hex string before returning
+    try:
+        bytes.fromhex(account_private_key)
+    except ValueError:
+        raise ValueError("Invalid private key: Contains non-hexadecimal characters or is an odd-length string.")
+        
     return account_private_key
 
 def set_account_encryption_key(val):

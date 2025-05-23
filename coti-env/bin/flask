@@ -1,4 +1,4 @@
-#!/Users/percival.lucena/coti-python-examples/coti-env/bin/python3
+#!/Users/percival.lucena/coti-python-examples/coti-env/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys
