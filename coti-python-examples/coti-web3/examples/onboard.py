@@ -16,10 +16,11 @@ from utils import (
 # encrypt/decrypt (which is basically all new precompiles operations introduced)
 def main():
     eoa, web3 = init()
-
+ 
     generate_or_recover_aes(web3, eoa)
     env_value = set_account_encryption_key(eoa.aes_key)
-
+    print(f"Encryption key: {eoa.aes_key}")
+    print(f"Onboard transaction hash: {eoa.onboard_tx_hash}")
     if env_value[0] is not True:
         raise Exception('encryption key not saved in .env!')
     
