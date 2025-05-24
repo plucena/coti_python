@@ -1,3 +1,9 @@
+
+## Web3.py Dapp Architecture
+
+![Web3.py Dapp Architecture](web3pydapp.jpg)
+
+
 ## Requirements
 
 running using Python 3.13
@@ -51,19 +57,21 @@ https://docs.soliditylang.org/en/latest/installing-solidity.html
 
 gemini 2.5 @coti-python-examples @coti-web3 @PrivateStorage.sol
 
-using examaples from @coti-python-examples write a @coti-web3.py program to compile and deploy @PrivateStorage.sol  
-on Coti Testnet
+using examaples from @coti-python-examples write a @coti-web3.py program to compile 
+and deploy @PrivateStorage.sol on Coti Testnet
 
-will probably  fail signing
+[will probably  fail signing]
 
 python3.13 compile_and_deploy_private_storage.py
 ```
 
-check smart contract on  testnet
+check smart contract on testnet
 
 ```
 https://testnet.cotiscan.io/address/0xb44E90707A29890942AE1D6595D6A52BA2Ba762e
 ```
+
+create a web3.py client
 
 ```
 DONT CHANGE SC ADDRESS FOR TEST
@@ -77,18 +85,19 @@ AES_KEY = "63f49d1ef7b1510060edcec934828b09" COTI_TESTNET_RPC_URL = "https://tes
  
 note that set private number should decript a decrypt ctUint64 type```
 
-create API
 ```
+
+create API
 
 @gemini
 
+```
 import code as necessary and create on a new file a Flask api that exposes
 POST set\_private\_number\_func(value\_to\_set: int):
 GET get\_private\_number\_func():
 
-check http://127.0.0.1:5000/privatenumber
-
 ```
 
-```
+check http://127.0.0.1:5000/privatenumber AND POSTMAN
 
+expose through an NFT
